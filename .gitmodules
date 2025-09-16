@@ -1,0 +1,4 @@
+[submodule "atproto"]
+	path = atproto
+	url = git@github.com:cboscolo/atproto.git
+	branch = cboscolo/farcaster-did

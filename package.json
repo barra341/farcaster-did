@@ -1,0 +1,35 @@
+{
+  "name": "did-fid-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for resolving Farcaster FID-based DIDs",
+  "main": "index.ts",
+  "bin": {
+    "did-fid": "./index.ts"
+  },
+  "type": "module",
+  "scripts": {
+    "setup": "git submodule update --init --recursive && cd atproto && npm install && npm run build",
+    "build:atproto": "cd atproto && npm run build",
+    "fid": "bun run index.ts",
+    "start": "bun run index.ts",
+    "resolve": "bun run index.ts lookup"
+  },
+  "dependencies": {
+    "@atproto/common-web": "^0.4.2",
+    "@atproto/crypto": "^0.4.4",
+    "viem": "^2.21.53"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "did",
+    "farcaster",
+    "decentralized-identity",
+    "w3c",
+    "resolver"
+  ],
+  "author": "",
+  "license": "MIT"
+}
